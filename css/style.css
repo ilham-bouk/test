@@ -1,0 +1,220 @@
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Pale-orange: hsl(25, 100%, 94%);
+  --Very-dark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --Black: hsl(0, 0%, 0%);/* (with 75% opacity for lightbox background) */
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--Dark-grayish-blue);
+}
+
+header {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  border-bottom: 2px solid hsl(220deg 14% 75% / 20%);
+  padding: 25px 0;
+  margin: 0 140px 80px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+nav ul a {
+  position: relative;
+  transition: .5s;
+}
+nav ul a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 4px;
+  background-color: var(--Orange);
+  bottom: -40px;
+  left: 0;
+  transition: .5s;
+}
+nav ul a:hover {
+  color: black;
+}
+nav ul a:hover::after {
+  width: 100%;
+}
+nav .icons {
+  display: flex;
+  gap: 40px;
+  position: relative;
+}
+nav .icons .basket {
+  /* display: none; */
+  position: absolute;
+  width: 380px;
+  background-color: white;
+  box-shadow: 0px 16px 20px 0px hsl(0deg 0% 0% / 20%);
+  left: -180px;
+  top: 60px;
+  border-radius: 10px;
+} 
+nav .icons .basket .title {
+  padding: 20px;
+  border-bottom: 1px solid hsl(219deg 9% 45% / 10%);
+  font-weight: 700;
+}
+nav .icons .basket .items {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+nav .icons > img {
+  width: 50px;
+  cursor: pointer;
+}
+nav .icons > img:hover {
+  border: 3px solid var(--Orange);
+  border-radius: 50%;
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+aside {
+  width: 33%;
+}
+.main-img {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+aside ul {
+  display: flex;
+  justify-content: space-between;
+}
+aside ul li {
+  width: 20%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+aside ul img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: .3s;
+}
+aside ul img:hover {
+  opacity: .7;
+}
+aside ul .active {
+  border: 3px solid var(--Orange);
+}
+aside ul .active img {
+  opacity: .4;
+}
+
+
+
+article {
+  width: 33%;
+}
+.sup-title {
+  color: var(--Very-dark-blue);
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 3rem;
+}
+p {
+  font-size: 16px;
+  color: var(--Dark-grayish-blue);
+  margin: 40px 0;
+  line-height: 1.7;
+}
+h2 {
+  font-size: 22px;
+  display: inline-block;
+}
+.desc {
+  background-color: var(--Very-dark-blue);
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  margin-left: 10px;
+}
+h4 {
+  text-decoration: line-through;
+  margin: 15px 0 35px;
+  color: var(--Dark-grayish-blue);
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+.btns .count {
+  background-color: var(--Light-grayish-blue);
+  display: flex;
+  padding: 0 15px;
+  gap: 40px;
+  height: 45px;
+  align-items: center;
+  border-radius: 5px;
+}
+.btns > button {
+  background-color: var(--Orange);
+  color: var(--Very-dark-blue);
+  width: 60%;
+  height: 45px;
+  gap: 15px;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: .3s;
+}
+.btns > button:hover {
+  background-color: hsl(26deg 100% 55% / 80%);
+} 
+
+
+
+
+footer {
+  opacity: .8;
+  font-size: 14px;
+  margin: 10px 20px 10px auto;
+  width: fit-content;
+}
+footer a {
+  color: var(--Orange);
+}
+
+
